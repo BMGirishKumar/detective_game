@@ -18,7 +18,14 @@ if not HF_TOKEN or HF_TOKEN == "hf_your_actual_token_here":
     exit()
 
 # Using Qwen2.5-Coder-7B-Instruct for high-fidelity JSON parsing and deep roleplay
-client = InferenceClient(model="Qwen/Qwen2.5-Coder-7B-Instruct", token=HF_TOKEN)
+# Change line 21 to this:
+# Replace your current client line with this exact direct endpoint initialization:
+client = InferenceClient(
+    model="https://huggingface.co", 
+    token=HF_TOKEN
+)
+
+
 console = Console()
 
 
